@@ -20,6 +20,7 @@ export const initDB = async () => {
     db.exec(`
       CREATE TABLE IF NOT EXISTS vitals (
         id INTEGER PRIMARY KEY CHECK (id = 1),
+        name TEXT,
         hunger INTEGER,
         happiness INTEGER,
         energy INTEGER,
@@ -37,11 +38,11 @@ export const initDB = async () => {
   }
 };
 
-export const saveVitals = (vitals, status, lifeStage, actionCount) => {
+export const saveVitals = (vitals, status, lifeStage, actionCount, name) => {
   if (!db) return;
   db.exec({
-    sql: `INSERT OR REPLACE INTO vitals (id, hunger, happiness, energy, status, life_stage, action_count) VALUES (1, ?, ?, ?, ?, ?, ?)`,
-    bind: [vitals.hunger, vitals.happiness, vitals.energy, status, lifeStage, actionCount]
+    sql: `INSERT OR REPLACE INTO vitals (id, hunger, happiness, energy, status, life_stage, action_count, name) VALUES (1, ?, ?, ?, ?, ?, ?, ?)`,
+    bind: [vitals.hunger, vitals.happiness, vitals.energy, status, lifeStage, actionCount, name]
   });
 };
 

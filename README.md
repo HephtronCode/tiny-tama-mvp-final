@@ -1,4 +1,4 @@
-# 🥚 Tiny Tama: A Living MVP
+# 🐶 Tiny Tama: A Living Puppy MVP
 > **The 7-Day Challenge: From Specification to Implementation.**
 
 Tiny Tama is a high-visual, low-stress virtual pet experience. It was built using a **Spec-Driven Development (SDD)** workflow, where every mechanic—from the 500ms interaction lock to the staggered 0-100 stat decay—was defined and validated in documentation before the first line of code was written.
@@ -10,6 +10,7 @@ To create a "digital desk pet" for children and young adults. Tiny Tama prioriti
 - **No Permanent Death:** The pet can become "Sick" but never dies.
 - **Intuitive Feedback:** High-visual cues (emojis, color shifts, particle effects).
 - **Meaningful Growth:** A permanent evolution milestone at 10 care actions.
+- **Personal Connection:** Name your puppy upon arrival!
 
 ---
 
@@ -17,6 +18,7 @@ To create a "digital desk pet" for children and young adults. Tiny Tama prioriti
 
 ### 1. The Tech Stack (Modern & Minimal)
 - **Framework:** Vite + React (Vanilla JS) for maximum agility.
+- **Animations:** **Framer Motion** for physics-based, fluid, high-quality movements.
 - **Styling:** **Tailwind CSS v4** + **shadcn/ui** for a polished, component-driven UI.
 - **Database:** **SQLite (Wasm/OPFS)**. A "native" database approach using the browser's Origin Private File System for robust, persistent local storage.
 - **Celebration:** `canvas-confetti` for milestone rewards.
@@ -41,9 +43,10 @@ Every interaction (+10 points) is governed by a **500ms animation lock** to ensu
 - **Feed:** Increases Hunger.
 - **Play:** Increases Happiness.
 - **Rest/Cure:** Increases Energy and serves as the exclusive recovery path from the "Sick" state.
+- **Touch Interaction:** Click the puppy to make it jump, spawn hearts, and get a small happiness boost.
 
-### Evolution
-The pet's life begins as an **Egg**. Upon reaching **10 successful care actions** while healthy, the pet enters a 2-second "Hatch" sequence, permanently evolving into a **Creature (🦖)**.
+### Evolution & Naming
+The pet's life begins in a **Cardboard Box (📦)**. Upon reaching **10 successful care actions** while healthy, the box arrives at its destination. You'll be prompted to **Name Your Puppy**, permanently evolving it into a **Puppy (🐶)**.
 
 ### Secret Easter Eggs
 - **Heart Shower:** Perform all 3 actions (Feed, Play, Rest) within 5 seconds to trigger a burst of hearts.
