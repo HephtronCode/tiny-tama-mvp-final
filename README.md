@@ -78,6 +78,7 @@ To ensure we could hit the 7-day deadline, we built a hidden **Debug Console** (
 
 ## 📂 Project Structure
 ```text
+├── agent-context/     # The Project Brain: Persistent skill, soul, and session data
 ├── care-loop/         # Feature Specs: Interaction logic
 ├── dynamic-state/     # Feature Specs: Evolution & Sick states
 ├── vitals/            # Feature Specs: Stat decay & boundaries
