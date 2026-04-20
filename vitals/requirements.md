@@ -13,6 +13,7 @@
 
 ## Thresholds & Triggers
 *   **State Trigger (Sick):** `if (Hunger == 0 || Happiness == 0 || Energy == 0)` -> Transition to **Sick**.
+*   **Cure Requirement:** Pet transitions from **Sick** back to **Normal** ONLY if **Energy >= 50** AND all other vitals are > 0.
 *   **Boundary Enforcement:** Stats are hard-capped at a minimum of **0** and a maximum of **100**.
 
 ## Easter Egg: "The Hangry Jitter"

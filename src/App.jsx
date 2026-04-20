@@ -135,10 +135,14 @@ const App = () => {
       actionHistory.current = [];
     }
 
-    setVitals(prev => ({ ...prev, [type]: Math.min(100, prev[type] + 10) }));
+    setVitals(prev => {
+      const nextVitals = { ...prev, [type]: Math.min(100, prev[type] + 10) };
+      if (status === 'sick' && type === 'energy' && nextVitals.energy >= 50 && nextVitals.hunger > 0 && nextVitals.happiness > 0) {
+        setStatus('normal');
+      }
+      return nextVitals;
+    });
     setActionCount(prev => prev + 1);
-
-    if (status === 'sick' && type === 'energy') setStatus('normal');
 
     setIsCooldown(true);
     setTimeout(() => setIsCooldown(false), 500);

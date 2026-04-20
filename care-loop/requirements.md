@@ -4,7 +4,7 @@
 *   **Feed:** Increases **Hunger** by **10 points**.
 *   **Play:** Increases **Happiness** by **10 points**.
 *   **Rest:** Increases **Energy** by **10 points**. 
-    *   *Note:* If the pet is in the **Sick** state, "Rest" also triggers the recovery to **Normal**.
+    *   *Note:* If the pet is in the **Sick** state, "Rest" triggers the recovery to **Normal** only once **Energy reaches 50%**.
 
 ## Interaction Constraints
 *   **Animation Lock (Cooldown):** After any care action button is clicked, all three action buttons are disabled for **500ms**. 

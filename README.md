@@ -42,7 +42,7 @@ The application operates on a strict state machine defined in `/vitals/requireme
 Every interaction (+10 points) is governed by a **500ms animation lock** to ensure the user feels the weight of their care actions.
 - **Feed:** Increases Hunger.
 - **Play:** Increases Happiness.
-- **Rest/Cure:** Increases Energy and serves as the exclusive recovery path from the "Sick" state.
+- **Rest/Cure:** Increases Energy. If the pet is **Sick**, it remains in that state until **Energy reaches 50%** and other vitals are above 0, serving as the exclusive recovery path.
 - **Touch Interaction:** Click the puppy to make it jump, spawn hearts, and get a small happiness boost.
 
 ### Evolution & Naming
